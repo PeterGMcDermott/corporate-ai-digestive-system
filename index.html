@@ -58,10 +58,10 @@
     .meters{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
     .meter label{display:flex;justify-content:space-between;gap:6px;font:600 .67rem "IBM Plex Mono",monospace;color:var(--muted);margin-bottom:6px}.bar{height:7px;background:color-mix(in srgb,var(--line) 38%,transparent);overflow:hidden}.fill{height:100%;width:50%;transition:width .45s;background:var(--cyan)}.meter:nth-child(2) .fill{background:var(--pink)}.meter:nth-child(3) .fill{background:var(--yellow)}.meter:nth-child(4) .fill{background:var(--lime)}
     .bodymap{position:relative;min-height:490px;border:1px solid var(--line);overflow:hidden;background:radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--cyan) 11%,transparent),transparent 42%)}
-    .body-outline{position:absolute;left:50%;top:42px;transform:translateX(-50%);width:232px;height:420px;border:2px solid color-mix(in srgb,var(--cyan) 70%,transparent);border-radius:46% 46% 31% 31% / 18% 18% 65% 65%;opacity:.42}.body-outline:before{content:"";position:absolute;width:88px;height:88px;border:2px solid var(--cyan);border-radius:50%;top:-68px;left:70px}.body-outline:after{content:"SPECIMEN 01";position:absolute;top:15px;left:50%;transform:translateX(-50%);font:600 .6rem "IBM Plex Mono",monospace;color:var(--cyan);white-space:nowrap}
+    .body-outline{position:absolute;left:50%;top:8px;transform:translateX(-50%);width:292px;height:474px;color:var(--cyan);opacity:.42;pointer-events:none}.body-outline .figure-fill{fill:color-mix(in srgb,var(--cyan) 7%,transparent);stroke:currentColor;stroke-width:2.4;vector-effect:non-scaling-stroke}.body-outline .anatomy-line{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;opacity:.72;vector-effect:non-scaling-stroke}.body-outline text{fill:currentColor;font:600 9px "IBM Plex Mono",monospace;letter-spacing:.08em}
     .organ-path{list-style:none;margin:0;padding:20px 14px;position:relative;z-index:2;display:grid;gap:10px}.organ-path:before{content:"";position:absolute;left:48px;top:48px;bottom:48px;border-left:2px dashed var(--line);z-index:-1}
     .organ{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;min-height:53px;opacity:.46;transition:opacity .25s,transform .25s}.organ.active,.organ.done{opacity:1}.organ.active{transform:translateX(5px)}
-    .organ-node{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:var(--panel);border:2px solid var(--line);font:700 .78rem "IBM Plex Mono",monospace}.organ.active .organ-node{border-color:var(--pink);background:var(--pink-bg);box-shadow:0 0 0 6px color-mix(in srgb,var(--pink) 15%,transparent)}.organ.done .organ-node{background:var(--lime);color:#112313;border-color:var(--lime)}
+    .organ-node{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:var(--panel);border:2px solid var(--line);font:700 .78rem "IBM Plex Mono",monospace}.organ.active .organ-node{border-color:var(--pink);background:var(--pink-bg);box-shadow:0 0 0 6px color-mix(in srgb,var(--pink) 15%,transparent)}.organ.done.correct .organ-node{background:var(--lime);color:#112313;border-color:var(--lime)}.organ.done.partial .organ-node{background:var(--yellow-bg);color:var(--yellow);border-color:var(--yellow)}.organ.done.poor .organ-node{background:color-mix(in srgb,var(--red) 12%,var(--panel));color:var(--red);border-color:var(--red)}
     .organ-copy b{display:block;font:700 .76rem "IBM Plex Mono",monospace;text-transform:uppercase}.organ-copy small{color:var(--muted);font:600 .68rem "IBM Plex Mono",monospace}
     .console{padding:24px;min-height:590px;display:flex;flex-direction:column}
     .stage-mark{color:var(--pink);font:700 .75rem "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}.stage-title{font:400 clamp(2rem,4vw,3.3rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;margin:0 0 18px;letter-spacing:-.035em}.quote{font-size:1.08rem;line-height:1.56;border-left:4px solid var(--yellow);padding:4px 0 4px 16px;margin:0 0 24px;color:var(--muted)}
@@ -70,9 +70,9 @@
     .console.stage-swap{animation:stageSwap .32s ease}.point-burst{position:fixed;z-index:10;pointer-events:none;color:var(--lime);font:400 2rem "Archivo Black",sans-serif;text-shadow:2px 2px 0 var(--ink);animation:pointFly .85s ease forwards}
     .transcript{margin-top:auto;padding-top:24px;font:600 .68rem/1.6 "IBM Plex Mono",monospace;color:var(--muted)}
     @keyframes scoreBump{50%{transform:scale(1.035);filter:brightness(1.2)}}@keyframes resultIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes stageSwap{from{opacity:.35;transform:translateX(10px)}to{opacity:1;transform:none}}@keyframes pointFly{0%{opacity:0;transform:translateY(8px) scale(.8)}25%{opacity:1}100%{opacity:0;transform:translateY(-54px) scale(1.1)}}
-    .ending{display:none}.ending.show{display:block}.verdict{padding:17px;border:1px solid var(--pink);background:var(--pink-bg);font:700 .84rem/1.5 "IBM Plex Mono",monospace;margin:18px 0}.scoreline{font:400 4.5rem/.9 "Archivo Black",sans-serif;color:var(--lime);margin:8px 0 12px}.restart{margin-top:14px}
+    .ending{display:none}.ending.show{display:block}.verdict{padding:17px;border:1px solid var(--pink);background:var(--pink-bg);font:700 .84rem/1.5 "IBM Plex Mono",monospace;margin:18px 0}.scoreline{font:400 4.5rem/.9 "Archivo Black",sans-serif;color:var(--lime);margin:8px 0 12px}.takeaway{margin:18px 0;padding:17px 18px;background:var(--cyan-bg);border:1px solid var(--cyan)}.takeaway h3{margin:0 0 9px;font:700 .76rem "IBM Plex Mono",monospace;color:var(--cyan);letter-spacing:.06em;text-transform:uppercase}.takeaway p{margin:0 0 10px;line-height:1.48}.takeaway ul{margin:0;padding-left:19px;color:var(--muted);line-height:1.5}.takeaway li+li{margin-top:5px}.restart{margin-top:14px}
     .atlas{margin-top:70px;border-top:1px solid var(--line);padding-top:32px}.atlas-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:24px}.atlas h2{font:400 clamp(2rem,4vw,3.4rem)/1 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.04em;margin:0}.atlas-head p{margin:0;max-width:470px;color:var(--muted);line-height:1.5}
-    .atlas-list{border-top:1px solid var(--line)}.atlas-item{border-bottom:1px solid var(--line)}.atlas-button{width:100%;appearance:none;border:0;background:transparent;color:var(--ink);padding:18px 0;display:grid;grid-template-columns:42px 1fr auto;gap:14px;text-align:left;align-items:center;cursor:pointer}.atlas-num{font:700 .78rem "IBM Plex Mono",monospace;color:var(--pink)}.atlas-name{font-weight:700;font-size:1rem}.atlas-toggle{font:700 1.2rem "IBM Plex Mono",monospace;color:var(--cyan)}.atlas-detail{display:none;padding:0 56px 20px;color:var(--muted);line-height:1.55;max-width:850px}.atlas-item.open .atlas-detail{display:block}.atlas-item.open .atlas-toggle{transform:rotate(45deg)}
+    .atlas-list{border-top:1px solid var(--line)}.atlas-item{border-bottom:1px solid var(--line)}.atlas-button{width:100%;appearance:none;border:0;background:transparent;color:var(--ink);padding:18px 0;display:grid;grid-template-columns:42px 1fr auto;gap:14px;text-align:left;align-items:center;cursor:pointer}.atlas-num{font:700 .78rem "IBM Plex Mono",monospace;color:var(--pink)}.atlas-name{font-weight:700;font-size:1rem}.atlas-toggle{font:700 1.2rem "IBM Plex Mono",monospace;color:var(--cyan)}.atlas-detail{display:none;padding:0 56px 24px;line-height:1.55;max-width:980px}.atlas-item.open .atlas-detail{display:block}.atlas-item.open .atlas-toggle{transform:rotate(45deg)}.atlas-problem{margin:0 0 13px;color:var(--muted)}.atlas-practice{margin:0 0 16px;padding:13px 14px;background:var(--cyan-bg);border:1px solid color-mix(in srgb,var(--cyan) 55%,var(--line));color:var(--ink)}.atlas-practice b{display:block;margin-bottom:4px;font:700 .7rem "IBM Plex Mono",monospace;color:var(--cyan);text-transform:uppercase;letter-spacing:.05em}.resource-label{margin:0 0 7px;font:700 .68rem "IBM Plex Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.resource-links{display:flex;flex-wrap:wrap;gap:8px}.resource-links a{display:inline-flex;align-items:center;min-height:34px;padding:7px 10px;border:1px solid var(--line);background:var(--panel);color:var(--cyan);text-decoration:none;font:700 .68rem "IBM Plex Mono",monospace}.resource-links a:hover{border-color:var(--cyan);background:var(--cyan-bg)}.resource-links a:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
     .source{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center;margin-top:54px;padding:22px;background:var(--panel);border:1px solid var(--line)}.source img{width:100%;height:auto;display:block}.source h3{font:400 1.5rem "Archivo Black",sans-serif;text-transform:uppercase;margin:0 0 8px}.source p{color:var(--muted);line-height:1.55;margin:0}
     .source a{color:var(--cyan);font:700 .75rem "IBM Plex Mono",monospace}
     .newsletter{margin-top:24px;padding:28px 30px;background:#050505;color:#f8f5e9;border:1px solid #d9ff43;box-shadow:7px 7px 0 #d9ff43;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;position:relative;overflow:hidden}.newsletter:after{content:"";position:absolute;right:185px;top:-42px;width:130px;height:130px;border:18px solid rgba(217,255,67,.12);transform:rotate(22deg);pointer-events:none}.newsletter-kicker{margin:0 0 8px;color:#d9ff43;font:700 .72rem "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}.newsletter h2{margin:0 0 8px;font:400 clamp(1.6rem,3vw,2.45rem)/1 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.035em}.newsletter-copy{margin:0;color:#d4d4cc;line-height:1.5;max-width:660px}.newsletter-link{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 18px;background:#d9ff43;color:#101010;text-decoration:none;font:700 .78rem "IBM Plex Mono",monospace;box-shadow:4px 4px 0 #f8f5e9;white-space:nowrap;transition:transform .15s,box-shadow .15s}.newsletter-link:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #f8f5e9}.newsletter-link:focus-visible{outline:3px solid #f8f5e9;outline-offset:4px}
@@ -124,7 +124,11 @@
             <div class="meter"><label><span>VALUE</span><span id="m3v">15</span></label><div class="bar"><div class="fill" id="m3"></div></div></div>
           </div>
           <div class="bodymap">
-            <div class="body-outline" aria-hidden="true"></div>
+            <svg class="body-outline" viewBox="0 0 300 500" aria-hidden="true" focusable="false">
+              <path class="figure-fill" d="M150 10c-24 0-41 18-41 44 0 20 11 37 29 45v14c-17 4-34 11-48 20-17 10-28 22-34 38L29 258c-4 14 2 26 14 29 11 3 21-5 25-18l22-70 3 84c1 23 10 43 24 58l-12 132c-2 15 6 25 19 26 13 0 19-9 20-24l6-110 6 110c1 15 7 24 20 24 13-1 21-11 19-26l-12-132c14-15 23-35 24-58l3-84 22 70c4 13 14 21 25 18 12-3 18-15 14-29l-27-87c-6-16-17-28-34-38-14-9-31-16-48-20V99c18-8 29-25 29-45 0-26-17-44-41-44Z"/>
+              <path class="anatomy-line" d="M138 99c4 2 8 3 12 3s8-1 12-3M138 113c-2 13-12 21-28 25m52-25c2 13 12 21 28 25M118 142c9 7 20 10 32 10s23-3 32-10M93 190c8-17 17-28 28-34m86 34c-8-17-17-28-28-34M117 341c9 7 20 11 33 11s24-4 33-11M150 152v200"/>
+              <text x="150" y="125" text-anchor="middle">SPECIMEN 01</text>
+            </svg>
             <ol class="organ-path" id="organPath"></ol>
           </div>
         </aside>
@@ -144,6 +148,15 @@
             <p class="prompt" id="endingVitals"></p>
             <p class="quote" id="endingCopy"></p>
             <div class="verdict" id="verdict"></div>
+            <section class="takeaway" aria-labelledby="takeawayTitle">
+              <h3 id="takeawayTitle">Post-op takeaway</h3>
+              <p id="takeawaySummary"></p>
+              <ul>
+                <li>Start with a real business problem, not an AI headline.</li>
+                <li>Fund the people, time, governance, and ownership needed to change the work.</li>
+                <li>Scale the useful workflow; stop rewarding pilots and status decks for existing.</li>
+              </ul>
+            </section>
             <button class="primary restart" id="restartBtn">RUN ANOTHER INITIATIVE</button>
           </div>
           <div class="transcript" id="transcript">› AI INITIATIVE INGESTED<br>› ORGANIZATIONAL RESPONSE PENDING…</div>
@@ -152,7 +165,7 @@
     </section>
 
     <section class="atlas">
-      <div class="atlas-head"><h2>Field atlas</h2><p>The anatomy, preserved for anyone who has ever watched a useful idea become a steering committee.</p></div>
+      <div class="atlas-head"><h2>Field atlas</h2><p>Open each stage for the practical countermeasure, then go deeper with guidance from NIST, GAO, OECD, Prosci, the UK government, the EU, and the World Economic Forum.</p></div>
       <div class="atlas-list" id="atlas"></div>
     </section>
 
@@ -174,39 +187,109 @@
   <script>
     const stages = [
       {organ:'Mouth',sub:'FOMO ingestion',quote:'“The Board reads a headline. AI is swallowed whole with zero chewing or thinking!”',detail:'A headline enters the organization before anyone has identified a problem worth solving.',choices:[
-        {label:'Swallow the headline whole',hint:'Declare an “AI-first transformation” by lunch.',d:[18,-12,-8,0],result:'Momentum spikes. Nobody can explain the strategy, but the town hall slide has a rocket on it.'},
-        {label:'Chew before swallowing',hint:'Name one business problem and the people living with it.',d:[4,14,3,10],result:'The launch is less theatrical. The problem is suddenly specific enough to be useful.'}
+        {label:'Swallow the headline whole',hint:'Declare an “AI-first transformation” by lunch.',quality:0,d:[18,-12,-8,0],result:'Momentum spikes. Nobody can explain the strategy, but the town hall slide has a rocket on it.'},
+        {label:'Chew before swallowing',hint:'Name one business problem and the people living with it.',quality:2,d:[4,14,3,10],result:'The launch is less theatrical. The problem is suddenly specific enough to be useful.'},
+        {label:'Create an AI task force',hint:'Gather leaders before defining what needs to change.',quality:1,d:[7,3,-5,3],result:'A capable group assembles around a blank page. There is movement, but the problem is still hiding.'},
+        {label:'Buy the platform everyone mentioned',hint:'Let the software purchase become the strategy.',quality:0,d:[12,-8,-16,-3],result:'Procurement gets a win. The organization gets a powerful answer in search of a question.'}
       ]},
       {organ:'Esophagus',sub:'The hype pipe',quote:'“Pushing unrealistic expectations downward at breakneck speed!”',detail:'Agents, ROI, scale, and buzzwords travel downward much faster than context or resources.',choices:[
-        {label:'Promise 10× ROI this quarter',hint:'Add “agentic” twice for credibility.',d:[16,-15,0,-4],result:'The deck flies down the hype pipe. Expectations arrive six weeks before the data access.'},
-        {label:'Set one measurable outcome',hint:'Choose a baseline, an owner, and a date.',d:[3,10,4,12],result:'The language gets duller. The odds of learning something get considerably better.'}
+        {label:'Promise 10× ROI this quarter',hint:'Add “agentic” twice for credibility.',quality:0,d:[16,-15,0,-4],result:'The deck flies down the hype pipe. Expectations arrive six weeks before the data access.'},
+        {label:'Set one measurable outcome',hint:'Choose a baseline, an owner, and a date.',quality:2,d:[3,10,4,12],result:'The language gets duller. The odds of learning something get considerably better.'},
+        {label:'Copy a competitor benchmark',hint:'Borrow their number before checking your own baseline.',quality:1,d:[8,1,1,4],result:'The target sounds credible in the meeting. It remains only loosely connected to your operation.'},
+        {label:'Avoid committing to any target',hint:'Call every result “strategic learning.”',quality:0,d:[-8,-5,4,-6],result:'Nobody can accuse the initiative of missing a goal that never existed. Value also goes missing.'}
       ]},
       {organ:'Stomach',sub:'Executive acid',quote:'“Harsh leadership mandates try to dissolve vague concepts with zero budget or training!”',detail:'Urgency and panic churn around a mandate that arrived without budget, training, or operating space.',choices:[
-        {label:'Mandate adoption at zero cost',hint:'Ask everyone to innovate after their real job.',d:[12,-18,12,-8],result:'The mandate digests morale first. Teams report 86 “use cases” and protect their calendars.'},
-        {label:'Fund training and protected time',hint:'Treat behavior change like actual work.',d:[2,14,-12,15],result:'Budget gets used on humans. Mysteriously, the humans begin using the technology.'}
+        {label:'Mandate adoption at zero cost',hint:'Ask everyone to innovate after their real job.',quality:0,d:[12,-18,12,-8],result:'The mandate digests morale first. Teams report 86 “use cases” and protect their calendars.'},
+        {label:'Fund training and protected time',hint:'Treat behavior change like actual work.',quality:2,d:[2,14,-12,15],result:'Budget gets used on humans. Mysteriously, the humans begin using the technology.'},
+        {label:'Train only the early adopters',hint:'Build champions, but leave the operating model untouched.',quality:1,d:[5,7,-6,7],result:'A small group gets good quickly. Everyone else keeps watching demos and waiting for help.'},
+        {label:'Add adoption to performance goals',hint:'Measure usage before people know what useful looks like.',quality:0,d:[10,-16,3,-5],result:'Usage rises on paper. Trust and thoughtful experimentation dissolve in the acid.'}
       ]},
       {organ:'Liver + pancreas',sub:'IT filter / Legal',quote:'“Filtering out massive security toxins and legal risk!”',detail:'Security and compliance are asked to remove every toxin from a strategy they first heard about yesterday.',choices:[
-        {label:'Route around the reviewers',hint:'Call governance “red tape.”',d:[12,-20,4,-12],result:'A shadow pilot escapes into production. Legal discovers it through a screenshot in a board deck.'},
-        {label:'Bring risk in at the design table',hint:'Threat-model the smallest useful version.',d:[-2,16,-5,12],result:'The first meeting is slower. The fifth month is much faster because nobody has to unwind a disaster.'}
+        {label:'Route around the reviewers',hint:'Call governance “red tape.”',quality:0,d:[12,-20,4,-12],result:'A shadow pilot escapes into production. Legal discovers it through a screenshot in a board deck.'},
+        {label:'Bring risk in at the design table',hint:'Threat-model the smallest useful version.',quality:2,d:[-2,16,-5,12],result:'The first meeting is slower. The fifth month is much faster because nobody has to unwind a disaster.'},
+        {label:'Ask for a blanket approval',hint:'Submit the broadest possible use case all at once.',quality:1,d:[-5,4,-4,4],result:'Review begins, but the giant scope makes every hypothetical risk feel immediate.'},
+        {label:'Wait for perfect enterprise policy',hint:'Pause all learning until every edge case is settled.',quality:0,d:[-14,0,3,-8],result:'Risk reaches zero because activity reaches zero. The policy arrives after the opportunity leaves.'}
       ]},
       {organ:'Small intestine',sub:'The pilot loop',quote:'“Passing through dozens of disjointed proof-of-concepts, absorbing almost zero actual value!”',detail:'Pilot programs, hackathons, and alignment workshops circle endlessly while value absorption approaches zero.',choices:[
-        {label:'Launch twelve more pilots',hint:'Surely volume will create clarity.',d:[10,-10,-15,-10],result:'The innovation portal looks incredible. Nobody knows which pilot should survive contact with reality.'},
-        {label:'Kill nine and scale one',hint:'Use explicit success and stop criteria.',d:[-5,10,6,20],result:'Nine demos die with dignity. One workflow gets boring enough to become valuable.'}
+        {label:'Launch twelve more pilots',hint:'Surely volume will create clarity.',quality:0,d:[10,-10,-15,-10],result:'The innovation portal looks incredible. Nobody knows which pilot should survive contact with reality.'},
+        {label:'Kill nine and scale one',hint:'Use explicit success and stop criteria.',quality:2,d:[-5,10,6,20],result:'Nine demos die with dignity. One workflow gets boring enough to become valuable.'},
+        {label:'Extend every pilot another quarter',hint:'More time might turn ambiguity into evidence.',quality:0,d:[-8,-4,-12,-5],result:'Nothing technically fails. Nothing meaningfully graduates either.'},
+        {label:'Rank pilots by executive enthusiasm',hint:'Use sponsorship as the proxy for evidence.',quality:1,d:[6,0,-5,5],result:'The loudest pilots survive. A few useful ones do too, mostly by coincidence.'}
       ]},
       {organ:'Large intestine',sub:'Bureaucratic squeeze',quote:'“A long, grueling journey of re-scoping, security reviews, and ‘change management.’”',detail:'The remaining idea is compressed by reviews, re-scoping, and change management in quotation marks.',choices:[
-        {label:'Form a steering committee',hint:'Eleven leaders. Zero decision rights.',d:[-12,-6,-10,-9],result:'The initiative achieves total alignment on the need for another pre-read.'},
-        {label:'Give one owner a decision boundary',hint:'Govern the edges, not every click.',d:[8,12,4,16],result:'A decision happens without a 42-person calendar poll. Several executives report mild dizziness.'}
+        {label:'Form a steering committee',hint:'Eleven leaders. Zero decision rights.',quality:0,d:[-12,-6,-10,-9],result:'The initiative achieves total alignment on the need for another pre-read.'},
+        {label:'Give one owner a decision boundary',hint:'Govern the edges, not every click.',quality:2,d:[8,12,4,16],result:'A decision happens without a 42-person calendar poll. Several executives report mild dizziness.'},
+        {label:'Escalate every disputed decision',hint:'Keep authority high and accountability fuzzy.',quality:0,d:[-10,-5,-8,-6],result:'Senior calendars become the bottleneck. The project waits patiently for oxygen.'},
+        {label:'Publish a detailed RACI',hint:'Clarify roles without actually assigning final authority.',quality:1,d:[1,5,-3,6],result:'Everyone knows who must be consulted. The identity of the decider remains an enterprise mystery.'}
       ]},
       {organ:'Output',sub:'The excretion',quote:'“Out comes a heavily processed, semi-automated report that could have been written by hand in 5 minutes.”',detail:'After the entire journey, the organism produces its most familiar artifact: the Weekly Status PPT.',choices:[
-        {label:'Ship the weekly status PPT',hint:'Seven slides. Three traffic-light colors.',d:[5,-7,6,-14],result:'The report is automated. Preparing to discuss the automated report now takes two meetings.'},
-        {label:'Ship the useful workflow',hint:'Measure whether somebody’s Tuesday got better.',d:[6,12,-4,22],result:'The deck is cancelled. A person gets 43 minutes back. The organism briefly encounters value.'}
+        {label:'Ship the weekly status PPT',hint:'Seven slides. Three traffic-light colors.',quality:0,d:[5,-7,6,-14],result:'The report is automated. Preparing to discuss the automated report now takes two meetings.'},
+        {label:'Ship the useful workflow',hint:'Measure whether somebody’s Tuesday got better.',quality:2,d:[6,12,-4,22],result:'The deck is cancelled. A person gets 43 minutes back. The organism briefly encounters value.'},
+        {label:'Launch a polished internal demo',hint:'Celebrate capability before measuring behavior change.',quality:1,d:[8,3,-4,7],result:'The demo earns applause and a recording. Whether the work improved remains unanswered.'},
+        {label:'Declare success from usage volume',hint:'Count clicks instead of outcomes.',quality:0,d:[7,-5,3,-10],result:'The dashboard turns green. The people doing the work struggle to name what improved.'}
       ]}
+    ];
+    const atlasGuides = [
+      {
+        practice:'Start with a named workflow, user, baseline, and constraint. Treat “use AI” as a technology preference, not a business case.',
+        resources:[
+          {label:'WEF · Workflows over software',url:'https://www.weforum.org/stories/artificial-intelligence/ai-why-workflows-matter-more-than-software/?ref=taaft&utm_source=taaft&utm_medium=referral'},
+          {label:'OECD · Trustworthy AI and hype',url:'https://www.oecd.org/content/dam/oecd/en/publications/reports/2020/07/trustworthy-artificial-intelligence-in-health_756c205c/f5e2bd44-en.pdf'}
+        ]
+      },
+      {
+        practice:'Convert promises into an outcome contract: baseline, metric, owner, review date, and an explicit definition of what would disprove the idea.',
+        resources:[
+          {label:'GAO · AI accountability practices',url:'https://www.GAO.gov/assets/gao-23-106811.pdf'},
+          {label:'WEF · Measure AI business value',url:'https://www.weforum.org/stories/artificial-intelligence/real-ai-challenge-for-ceos-control-destiny/'}
+        ]
+      },
+      {
+        practice:'Back the mandate with protected learning time, role-specific training, visible sponsorship, and support for people changing the workflow.',
+        resources:[
+          {label:'Prosci · ADKAR change model',url:'http://prosci.com/methodology/adkar'},
+          {label:'OECD · Training for AI adoption',url:'https://www.OECD.org/en/publications/2024/12/training-supply-for-the-green-and-ai-transitions_e75ff953/full-report/adult-training-supply-to-support-ai-adoption-and-use_e7250c17.html'}
+        ]
+      },
+      {
+        practice:'Bring security, privacy, legal, procurement, and affected users into design early. Scope controls to the actual use case and document human oversight.',
+        resources:[
+          {label:'NIST · AI Risk Management Framework',url:'https://www.nist.gov/itl/ai-risk-management-framework'},
+          {label:'NIST · Generative AI risk profile',url:'http://nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence'}
+        ]
+      },
+      {
+        practice:'Run the smallest real-world test that can answer a decision. Set success, safety, adoption, and stop criteria before launch, then scale or stop.',
+        resources:[
+          {label:'UK Government · AI Playbook principles',url:'https://webarchive.nationalarchives.gov.uk/ukgwa/20250602165846mp_/https://assets.publishing.service.gov.uk/media/67a37408b74b3d9dfe36ca9b/AI_Playbook_Posters.pdf'},
+          {label:'EU · Helsinki responsible AI pilot',url:'https://interoperable-europe.ec.europa.eu/collection/public-sector-tech-watch/helsinki-pilots-responsible-generative-ai-exploring-introduction-ai-powered-tools-enhance-employees'}
+        ]
+      },
+      {
+        practice:'Give one accountable owner a clear decision boundary. Manage adoption person by person, and reinforce the new behavior after launch.',
+        resources:[
+          {label:'Prosci · Why ADKAR works',url:'https://www.prosci.com/blog/why-the-adkar-model-works'},
+          {label:'WEF · Human oversight and change',url:'https://www.weforum.org/stories/artificial-intelligence/why-change-management-and-human-oversight-are-non-negotiable-when-leading-through-ai/'}
+        ]
+      },
+      {
+        practice:'Report outcomes, not activity: workflow quality, time-to-outcome, adoption by target users, trust, risk events, cost, and corrective actions.',
+        resources:[
+          {label:'GAO · Governance, data, performance, monitoring',url:'https://www.GAO.gov/assets/gao-23-106811.pdf'},
+          {label:'WEF · Build measurement discipline',url:'https://www.weforum.org/stories/artificial-intelligence/ai-why-workflows-matter-more-than-software/?ref=taaft&utm_source=taaft&utm_medium=referral'}
+        ]
+      }
     ];
     let current=0, scores=[50,50,50,15], points=0, streak=0, picked=false, history=[];
     const $=s=>document.querySelector(s);
     function clamp(v){return Math.max(0,Math.min(100,v))}
     function renderPath(){
-      $('#organPath').innerHTML=stages.map((s,i)=>`<li class="organ ${i<current?'done':i===current?'active':''}"><span class="organ-node">${i<current?'✓':i+1}</span><span class="organ-copy"><b>${s.organ}</b><small>${s.sub}</small></span></li>`).join('');
+      $('#organPath').innerHTML=stages.map((s,i)=>{
+        const result=history[i],complete=i<current||current===stages.length;
+        const grade=result?(result.quality===2?'correct':result.quality===1?'partial':'poor'):'';
+        const mark=result?(result.quality===2?'✓':result.quality===1?'~':'×'):i+1;
+        return `<li class="organ ${complete?'done '+grade:i===current?'active':''}"><span class="organ-node">${complete?mark:i+1}</span><span class="organ-copy"><b>${s.organ}</b><small>${s.sub}</small></span></li>`;
+      }).join('');
     }
     function renderScores(){
       scores.forEach((v,i)=>{$('#m'+i).style.width=v+'%';$('#m'+i+'v').textContent=v});
@@ -227,14 +310,14 @@
     }
     function choose(e){
       if(picked)return;picked=true;
-      const idx=Number(e.currentTarget.dataset.choice),c=stages[current].choices[idx],strong=idx===1;
+      const idx=Number(e.currentTarget.dataset.choice),c=stages[current].choices[idx],strong=c.quality===2,partial=c.quality===1;
       scores=scores.map((v,i)=>clamp(v+c.d[i]));
       if(strong)streak++;else streak=0;
-      const bonus=strong&&streak>1?25:0,earned=strong?100+bonus:20;
-      points+=earned;history.push({stage:stages[current].organ,choice:c.label,earned});
-      document.querySelectorAll('.choice').forEach((b,i)=>{b.disabled=true;b.style.opacity=i===idx?'1':'.42';if(i===idx)b.style.borderColor=strong?'var(--lime)':'var(--yellow)'});
+      const bonus=strong&&streak>1?25:0,earned=strong?100+bonus:partial?55:20;
+      points+=earned;history.push({stage:stages[current].organ,choice:c.label,earned,quality:c.quality});
+      document.querySelectorAll('.choice').forEach((b,i)=>{b.disabled=true;b.style.opacity=i===idx?'1':'.42';if(i===idx)b.style.borderColor=strong?'var(--lime)':partial?'var(--yellow)':'var(--red)'});
       $('#resultText').textContent=c.result;
-      $('#awardReason').textContent=strong?(bonus?'STRONG DECISION · STREAK BONUS':'STRONG DECISION'):'MOMENTUM WITHOUT VALUE';
+      $('#awardReason').textContent=strong?(bonus?'STRONG DECISION · STREAK BONUS':'STRONG DECISION'):partial?'PARTIAL CREDIT · NEEDS A SHARPER OUTCOME':'ACTIVITY WITHOUT VALUE';
       $('#awardPoints').textContent=`+${earned} PTS`;
       $('#resultBox').classList.add('show');renderScores();bump('#pointsCell');bump('#streakCell');burst(`+${earned}`,e.currentTarget);
       const change=c.d.map((v,i)=>`${['MOM','TRU','BUD','VAL'][i]} ${v>=0?'+':''}${v}`).join(' · ');$('#transcript').innerHTML=`› ${stages[current].organ.toUpperCase()}: ${c.label.toUpperCase()}<br>› ${change}<br>› SCORE +${earned} · TOTAL ${points}`;
@@ -246,15 +329,24 @@
       if(points>=700&&value>=72&&trust>=60&&budget>=25){title='Actual value escaped';copy='Against the odds, your initiative survived the anatomy and made someone’s work meaningfully better.';verdict='GOAL CLEARED · A rare case of enterprise AI reaching production without becoming performance theater.'}
       else if(points>=400&&value>=48&&trust>=25&&budget>=15){title='Pilot purgatory';copy='The initiative is alive, technically. It now has a governance cadence, a roadmap, and an uncertain relationship with usefulness.';verdict=`GOAL MISSED BY ${Math.max(0,700-points)} PTS · Reduce slides, add ownership, repeat treatment.`}
       else{title='Status deck achieved';copy='The promising idea was fully processed into a well-formatted account of why the promising idea remains promising.';verdict=`GOAL MISSED BY ${Math.max(0,700-points)} PTS · Acute PowerPoint production. Value absorption was minimal.`}
-      $('#endingTitle').textContent=title;$('#scoreline').textContent=points+' PTS';$('#endingVitals').textContent=`FINAL VITALS · VALUE ${value} · TRUST ${trust} · BUDGET ${budget}`;$('#endingCopy').textContent=copy;$('#verdict').textContent=verdict;$('#transcript').innerHTML=`› OUTPUT GENERATED<br>› PROCEDURE SCORE: ${points} / 700 GOAL<br>› VALUE ABSORPTION: ${value}%`;
+      const correct=history.filter(h=>h.quality===2).length,partial=history.filter(h=>h.quality===1).length;
+      const takeaway=correct>=6
+        ?`You made ${correct} of 7 value-building decisions. Your pattern was clear: define the outcome, involve the right people early, and give one owner room to scale what works.`
+        :correct>=3
+          ?`You made ${correct} strong decisions and ${partial} defensible halfway calls. The misses came where activity, approval, or visibility stood in for a measurable improvement to the work.`
+          :`You made ${correct} of 7 value-building decisions. The anatomy exposed the trap: enterprise AI fails when hype, pilot volume, and reporting are mistaken for changed work.`;
+      $('#endingTitle').textContent=title;$('#scoreline').textContent=points+' PTS';$('#endingVitals').textContent=`FINAL VITALS · VALUE ${value} · TRUST ${trust} · BUDGET ${budget}`;$('#endingCopy').textContent=copy;$('#verdict').textContent=verdict;$('#takeawaySummary').textContent=takeaway;$('#transcript').innerHTML=`› OUTPUT GENERATED<br>› PROCEDURE SCORE: ${points} / 700 GOAL<br>› VALUE ABSORPTION: ${value}%`;
     }
     function start(){current=0;scores=[50,50,50,15];points=0;streak=0;history=[];$('#intro').style.display='none';$('#game').classList.add('live');$('#stageView').style.display='block';$('#ending').classList.remove('show');renderStage();$('#game').scrollIntoView({behavior:'smooth'})}
     function buildAtlas(){
-      $('#atlas').innerHTML=stages.map((s,i)=>`<article class="atlas-item"><button class="atlas-button" aria-expanded="false"><span class="atlas-num">0${i+1}</span><span class="atlas-name">${s.organ} · ${s.sub}</span><span class="atlas-toggle">+</span></button><div class="atlas-detail">${s.detail}</div></article>`).join('');
+      $('#atlas').innerHTML=stages.map((s,i)=>{
+        const guide=atlasGuides[i],links=guide.resources.map(r=>`<a href="${r.url}" target="_blank" rel="noopener noreferrer">${r.label} ↗</a>`).join('');
+        return `<article class="atlas-item"><button class="atlas-button" aria-expanded="false"><span class="atlas-num">0${i+1}</span><span class="atlas-name">${s.organ} · ${s.sub}</span><span class="atlas-toggle">+</span></button><div class="atlas-detail"><p class="atlas-problem">${s.detail}</p><p class="atlas-practice"><b>Better practice</b>${guide.practice}</p><p class="resource-label">Reliable field references</p><div class="resource-links">${links}</div></div></article>`;
+      }).join('');
       document.querySelectorAll('.atlas-button').forEach(b=>b.addEventListener('click',()=>{const item=b.parentElement,open=item.classList.toggle('open');b.setAttribute('aria-expanded',String(open))}));
     }
     $('#startBtn').addEventListener('click',start);$('#nextBtn').addEventListener('click',next);$('#restartBtn').addEventListener('click',start);
-    document.addEventListener('keydown',e=>{if(!$('#game').classList.contains('live')||$('#ending').classList.contains('show'))return;const key=e.key.toLowerCase();if(!picked&&(key==='a'||key==='b')){const choice=document.querySelector(`.choice[data-choice="${key==='a'?0:1}"]`);if(choice)choice.click()}else if(picked&&e.key==='Enter')next()});
+    document.addEventListener('keydown',e=>{if(!$('#game').classList.contains('live')||$('#ending').classList.contains('show'))return;const key=e.key.toLowerCase(),keys=['a','b','c','d'];if(!picked&&keys.includes(key)){const choice=document.querySelector(`.choice[data-choice="${keys.indexOf(key)}"]`);if(choice)choice.click()}else if(picked&&e.key==='Enter')next()});
     buildAtlas();
   </script>
 </body>
