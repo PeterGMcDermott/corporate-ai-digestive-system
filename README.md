@@ -1,5 +1,7 @@
 # The Corporate AI Adoption Digestive System
 
+Play it with no frame: https://petergmcdermott.github.io/corporate-ai-digestive-system/
+
 Try it live: https://muse.ai/s/the-corporate-ai-adoption-digestive-om6o4xl5xtxcq2
 
 A satirical decision game based on the anatomical diagram of how most enterprises process AI strategy. Steer an AI initiative through all seven organs, from FOMO ingestion at the mouth to the weekly status PPT at the output.
